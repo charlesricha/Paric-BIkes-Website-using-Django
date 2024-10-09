@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid purple;
+    
+}
+:root{
+    --main-color:#ff7a00;
+    --text-color:#000000;
+    --second-text-color:#ffffff;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+section{
+    height: 100vh;
+} 
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ====== Header====== */
+
+.header{
+    height: 4rem;
+    z-index: 30;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 3px -2px black;
+    justify-content: space-between;
+    background-color: var(--second-text-color);
+}
+.logo{
+    color: var(--text-color);
+    margin-left: 1rem;
+    font-weight: 600;
+    font-size: 24px;
+
+}
+
+.btn{
+    background-color: var(--main-color);
+    color: var(--second-text-color);
+    padding: 0rem 1rem;
+    border: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+
+/*  Landing Page */
+
+.landing-page{
+    display: flex;
+    width: 100%;
+}
+
+.content{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.content *{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+/*get started Button*/
+
+#get-started{
+    width: 20%;
+   margin-left: auto;
+   margin-right: auto;
+    
+    padding: .5rem;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 50%;
+    background-color: var(--main-color);
+
+}
+.img img{
+    height: 50vh;
+}
+
+
+
+
+
+
+/* ============Bikes available for rental============ */
+
+#rentalBikes-Page h2{
+    margin-top: 3rem;
+    text-align: center;
+}
+.items{
+   height: 50vh;
+    max-width: 100%;
+    display: grid;
+    grid-auto-flow: column;/*Creating a smooth slide option*/
+    grid-auto-columns:28%;
+    column-gap: 10px;
+    overflow-x: auto;
+    grid-template-rows: min-content;
+    overscroll-behavior-inline: container;
+}
+.snaps-inline{
+    cursor:grab;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+.snaps-inline > * {
+    scroll-snap-align: start;
+}
+.container{
+    height: 40vh;
+    margin-left: .2rem;
+    border-radius: 15px;
+    
+}
+.container > img{
+    border-radius: 15px;
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+.Fast-Bikes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0rem;
+    background-color: var(--main-color);
+    height: 25vh;
+}
+
+
+
+
+/* #GetStarted-Page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0rem;
+ 
+} */
+
+.content-fast{
+   
+    text-align: center;
+    gap: 10px;
+    margin-left: 40%;
+}
+
+/* 
+========Fast bike sections=====*/
+.btn-2{
+    
+    background-color: var(--text-color);
+    color: var(--second-text-color);
+    padding-left: 1rem;
+    margin: .3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    width: 45%;
+    text-align: center;
+       
+    
+}
+#FastestBikes{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+#FastestBikes h2{
+    margin-top: 3rem;
+    text-align: center;
+
+}
+
+
+
+
+.item-fast{
+  margin-top: 5rem;
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    gap: 10px;
+}
+.container-speed{
+    width: 100%;
+   
+   
+}
+.img-scroll{
+    
+    height: 35vh;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns:310px 300px;
+    column-gap: 10px;
+    overflow-x: auto;
+    grid-template-rows: min-content;
+    overscroll-behavior-inline: container;
+}
+
+.img-scroll img{
+   margin: 0rem;
+    border-radius: 3px;
+    inline-size: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  
+}
+.container-content{
+    margin-left: 1rem;
+}
+.footer{
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-around;
+    height: 10vh
+}
+
+
+/*980px Small Desktop Design*/
+
+@media screen and (max-width:980px) {
+    .navbar{
+        width: 100%;
+    }
+    }
